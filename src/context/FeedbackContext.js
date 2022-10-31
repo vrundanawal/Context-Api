@@ -9,6 +9,11 @@ export const FeedbackProvider = ({ children }) => {
       rating: 10,
       text: "This is feedback item 1 from Context ",
     },
+    {
+      id: 2,
+      rating: 8,
+      text: "This is feedback item 2 from Context ",
+    },
   ]);
   return (
     <feedbackContext.Provider value={{ feedback: feedback }}>
