@@ -6,7 +6,7 @@ import Card from "./shared/Card";
 
 const FeedbackForm = () => {
   const [text, setText] = useState("");
-  const [rating, setRating] = useState();
+  const [rating, setRating] = useState(null);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
