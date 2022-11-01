@@ -2,10 +2,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useContext } from "react";
 import FeedbackItem from "./FeedbackItem";
 
-import feedbackContext from "../context/FeedbackContext";
+import FeedbackContext from "../context/FeedbackContext";
 
 const FeedbackList = () => {
-  const { feedback } = useContext(feedbackContext);
+  const { feedback } = useContext(FeedbackContext);
   //console.log(feedback);
   if (!feedback || feedback.length === 0) {
     return <p>No FeedBack is available</p>;

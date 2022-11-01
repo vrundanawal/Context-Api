@@ -6,7 +6,7 @@ import Card from "./shared/Card";
 
 const FeedbackForm = () => {
   const [text, setText] = useState("");
-  const [rating, setRating] = useState(10);
+  const [rating, setRating] = useState();
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
@@ -46,6 +46,7 @@ const FeedbackForm = () => {
         <h2>How would you rate your service with us?</h2>
         {/* todo - rating select component */}
         <RatingSelect select={(rating) => setRating(rating)} />
+
         <div className="input-group">
           <input
             type="text"

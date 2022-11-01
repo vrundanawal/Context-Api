@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 import { createContext, useState } from "react";
 import FeedbackData from "../data/FeedbackData";
 
-const feedbackContext = createContext();
+const FeedbackContext = createContext();
 
 export const FeedbackProvider = ({ children }) => {
   const [feedback, setFeedBack] = useState(FeedbackData);
@@ -20,12 +20,12 @@ export const FeedbackProvider = ({ children }) => {
     setFeedBack([newFeedback, ...feedback]);
   };
   return (
-    <feedbackContext.Provider
+    <FeedbackContext.Provider
       value={{ feedback: feedback, deleteFeedback, addFeedback }}
     >
       {children}
-    </feedbackContext.Provider>
+    </FeedbackContext.Provider>
   );
 };
 
-export default feedbackContext;
+export default FeedbackContext;
